@@ -1,0 +1,51 @@
+.search-box {
+  margin: 2em auto;
+  background-color: map-get($background-colors, search-background);
+  border-radius: .5em;
+  padding: .5em;
+  width: 100%;
+}
+
+input[type=search] {
+  width: 75%;
+  padding: .6em;
+  border: 0;
+  border-radius: .5em;
+  font-size: 1em;
+  color: map-get($font-colors, search-input);
+  @media (min-width: 445px) {
+    font-size: 1.25em;
+  }
+  @media (min-width: 640px) {
+    width: 85%;
+  }
+  @media (min-width: 845px) {
+    font-size: 1.5em;
+  }
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px map-get($font-colors, recipe-heading);
+  }
+}
+
+.search-box_button {
+  display: inline-block;
+  width: 25%;
+  text-align: center;
+  font-size: 1.125em;
+  font-weight: 900;
+  padding: .5em;
+  color: map-get($font-colors, search-button);
+  &:hover {
+    cursor: pointer;
+  }
+  @media (min-width: 445px) {
+    font-size: 1.25em;
+  }
+  @media (min-width: 640px) {
+    width: 15%;
+  }
+  @media (min-width: 845px) {
+    font-size: 1.75em;
+  }
+}

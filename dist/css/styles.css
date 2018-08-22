@@ -1,0 +1,267 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+canvas,
+img,
+video {
+  max-width: 100%; }
+
+.container .row::before, .container .row::after {
+  clear: both;
+  content: '';
+  display: block; }
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%; }
+  .container .row {
+    width: 100%; }
+    .container .row [class*='col'] {
+      width: 100%; }
+    @media (min-width: 640px) {
+      .container .row .col-1 {
+        float: left;
+        width: 8.33333%; }
+      .container .row .col-2 {
+        float: left;
+        width: 16.66667%; }
+      .container .row .col-3 {
+        float: left;
+        width: 25%; }
+      .container .row .col-4 {
+        float: left;
+        width: 33.33333%; }
+      .container .row .col-5 {
+        float: left;
+        width: 41.66667%; }
+      .container .row .col-6 {
+        float: left;
+        width: 50%; }
+      .container .row .col-7 {
+        float: left;
+        width: 58.33333%; }
+      .container .row .col-8 {
+        float: left;
+        width: 66.66667%; }
+      .container .row .col-9 {
+        float: left;
+        width: 75%; }
+      .container .row .col-10 {
+        float: left;
+        width: 83.33333%; }
+      .container .row .col-11 {
+        float: left;
+        width: 91.66667%; }
+      .container .row .col-12 {
+        float: left;
+        width: 100%; } }
+
+* {
+  font-size: 16px;
+  font-family: "Nunito", sans-serif; }
+
+body {
+  background: url(../../dist/img/background_main.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: 100vh; }
+
+.search-box {
+  margin: 2em auto;
+  background-color: #222d22;
+  border-radius: .5em;
+  padding: .5em;
+  width: 100%; }
+
+input[type=search] {
+  width: 75%;
+  padding: .6em;
+  border: 0;
+  border-radius: .5em;
+  font-size: 1em;
+  color: #575b4f; }
+  @media (min-width: 445px) {
+    input[type=search] {
+      font-size: 1.25em; } }
+  @media (min-width: 640px) {
+    input[type=search] {
+      width: 85%; } }
+  @media (min-width: 845px) {
+    input[type=search] {
+      font-size: 1.5em; } }
+  input[type=search]:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px #a8ed63; }
+
+.search-box_button {
+  display: inline-block;
+  width: 25%;
+  text-align: center;
+  font-size: 1.125em;
+  font-weight: 900;
+  padding: .5em;
+  color: #fff; }
+  .search-box_button:hover {
+    cursor: pointer; }
+  @media (min-width: 445px) {
+    .search-box_button {
+      font-size: 1.25em; } }
+  @media (min-width: 640px) {
+    .search-box_button {
+      width: 15%; } }
+  @media (min-width: 845px) {
+    .search-box_button {
+      font-size: 1.75em; } }
+
+.recipes-list {
+  background: #000;
+  opacity: 0.8;
+  border-radius: 0.5em;
+  color: #e1efd0; }
+  .recipes-list h1 {
+    text-align: center;
+    padding: 0.5em;
+    font-size: 2.5em;
+    font-weight: 900;
+    color: #a8ed63; }
+    @media (min-width: 640px) {
+      .recipes-list h1 {
+        font-size: 4em; } }
+  .recipes-list li {
+    color: #e1efd0; }
+  .recipes-list .recipes-list_element {
+    padding: 1.5em;
+    border-bottom: 5px solid #1d2b00; }
+  .recipes-list .recipes-list_image {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .recipes-list .recipes-list_image img {
+      width: 300px;
+      height: 300px;
+      border-radius: 0.5em;
+      margin-bottom: 0.5em; }
+      .recipes-list .recipes-list_image img:hover {
+        cursor: pointer; }
+  .recipes-list .recipes-list_main p {
+    text-align: center;
+    font-size: 1.25em;
+    padding-bottom: 0.7em; }
+  .recipes-list .recipes-list_main h4 {
+    font-size: 2em;
+    text-align: center;
+    padding-bottom: 0.5em; }
+
+  @media (max-width: 640px) {
+    .recipes-list .recipes-list_main {
+      width: 100%; } }
+  .recipes-list .recipes-list_ingredients .recipes-list_ingredients_heading {
+    border-bottom: 2px solid #1d2b00;
+    text-align: center;
+    font-size: 2em; }
+  .recipes-list .recipes-list_ingredients li {
+    text-align: center;
+    font-size: 1.25em;
+    padding-bottom: 0.5em;
+    list-style-type: none; }
+  .recipes-list .recipes-list_ingredients ul {
+    padding: 1.5em 0; }
+  .recipes-list .recipes-list_ingredients .recipes-list_ingredients_instructions {
+    font-size: 1.25em;
+    text-align: center;
+    padding: 1.5em 0; }
+  @media (max-width: 640px) {
+    .recipes-list .recipes-list_ingredients {
+      width: 100%; } }
+
+.recipes-list_not-found p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #575b4f; }
+  @media (min-width: 640px) {
+    .recipes-list_not-found p {
+      font-size: 2rem; } }
+
+.fullScreen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.8); }
+  .fullScreen img {
+    border-radius: 0.5em;
+    display: block;
+    margin: 1em auto;
+    width: 295px;
+    height: 295px; }
+    @media (min-width: 640px) and (orientation: landscape) {
+      .fullScreen img {
+        margin: 0.5em auto;
+        width: 300px;
+        height: 300px; } }
+    @media (min-width: 840px) {
+      .fullScreen img {
+        margin: 1em auto;
+        width: 500px;
+        height: 500px; } }
+    @media (min-width: 1200px) {
+      .fullScreen img {
+        width: 400px;
+        height: 400px; } }
+
+.fullScreen-button_close {
+  display: block;
+  margin: 0 auto;
+  padding: 0.5em 2em;
+  border: none;
+  border-radius: 0.5em;
+  font-size: 1.25em;
+  font-weight: bold;
+  background: #222d22;
+  color: #fff; }
+  .fullScreen-button_close:hover {
+    cursor: pointer; }
+
+.scroll-to-top {
+  position: fixed;
+  bottom: .25em;
+  right: .25em;
+  height: .75em;
+  width: .75em;
+  border-radius: .125em;
+  border: none;
+  background: #000;
+  color: #dff41d;
+  font-size: 4em;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  opacity: .8; }
+  @media (min-width: 640px) {
+    .scroll-to-top {
+      bottom: .5em;
+      right: 1em;
+      height: 1em;
+      width: 1em; } }
+  .scroll-to-top:hover {
+    cursor: pointer; }
